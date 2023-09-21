@@ -1,0 +1,283 @@
+/*A partir de aqui, lo que yo hice para mi web*/
+
+/*-->Footer<--*/
+footer {
+    background: #d9d9d9;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+.letrafooter {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: nor;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/*-->Main + Body<--*/
+.div-imagen-fondo{
+    background-image: url(../imagen/fondoBody.jpg);
+    height: 1000px;
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+/*-->Header<--*/
+header {
+    background: #000000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+h1{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+/*-->Botones y navegacion<--*/
+/*Color de fondo de los botones*/
+nav{
+    background: #d9d9d9;
+    overflow: hidden;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+}
+/*No muestra el botón de menú*/
+input{
+    display: none;
+}
+/*No muestra la hamburguesa*/
+label{
+    display: none;
+}
+/*Muestra los botones con la disposición horizontal para notebook*/
+ul{
+    display: flex;
+    justify-content: center;
+    margin-top:0;
+    padding:0;
+}
+/*propiedad de cada boton*/
+li{
+    display: block;
+    background: #d9d9d9;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    border-radius: 50px;
+}
+/*Estilo boton con el mouse arriba*/
+li:hover{
+    filter:brightness(110%);
+    background: #999898;
+    border-bottom:0.5px solid #000;
+}
+
+/*cuando el dispositivo es como maximo de 700px*/
+@media all and (max-width:790px){
+    /*Muestra todo el contenido de todas las etiquetas ul*/
+    input:checked ~ ul{
+        display: block;
+        position: static;
+        margin-top:10px;
+    }
+    /*Cambia la forma de ver los elementos del nav*/
+    nav {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    /*Muestra el contenido de las etiquetas label*/
+    input:checked ~ label{
+        background: lightgrey;
+    }
+    /*Cambia el color de la hamburguesa*/
+    label:hover{
+        background:grey;
+    }
+    /*Elimina el margen de los botones*/
+    li{
+        margin: 0; /* Elimina el margen de los botones */
+        border-radius: 0; /* Elimina el borde redondeado en los botones */
+        border-top: 1px solid #000; /* Agrega un borde superior para separar los botones */
+    }
+    /*Dibuja la hamburguesa como botón*/
+    label{
+        display: block; /* Mostrar el botón de hamburguesa */
+        cursor: pointer;
+        background-color: #999898;
+        border-radius: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        margin: 10px;
+    }
+    /*Deja de mostrar el bloque contenedor de los botones horizontales*/
+    ul{
+        display: none; /* Ocultar la lista de enlaces inicialmente */
+        background-color: #d9d9d9;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*tipografía + opciones de letra botones*/
+.letrabotones{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: nor;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/*Caja index donde irá la información*/
+/*Caja ventana inicio*/
+.cajaindexinicio {
+    border-radius: 55px;
+    background-color:#D9D9D9B2;
+    height: 330px;
+    width: 755px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+    font-size: 20px;
+}
+
+/*Caja todas las demás ventanas*/
+.cajaindexventanas{
+    border-radius: 55px;
+    background-color:#D9D9D9B2;
+    height: 547px;
+    width: 755px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+    font-size: 20px;
+    position: relative;
+}
+
+/*Letras*/
+/*Letras index Inicio*/
+.nombreindex{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.carreraindex{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+/*Letra titulo index demás ventanas*/
+.tituloindex{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center; 
+    position: absolute; 
+    top: 34px; /* A 34px del margen superior ed la caja */
+}
+
+/*Letra index demás ventanas*/
+.infoindex{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    position: absolute;
+    top: 150px;
+    right: 5px;
+    left: 400px;
+}
+
+/*Letra links*/
+.letralink{
+    text-decoration: none;
+    color:#000;
+    font-weight: lighter;
+}
+
+/*Letra para texto NO BOLD*/
+.letralighter{
+    font-weight: lighter;
+}
+
+/*Foto cv*/
+.fotocv{
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display:inline-block;
+    position: absolute;
+    top: 162px;
+    left: 60px;
+}
+
+/*Imagenes index*/
+.fotoindex{
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    display:inline-block;
+    position: absolute;
+    top: 162px;
+    left: 60px;
+}
+
+/*Imagenes de cada index + texto index a 700px*/
+@media (max-width: 700px) {
+    .fotocv,.fotoindex {
+        display: none;
+    }
+    .infoindex {
+        line-height: normal;
+        text-align: center; 
+        position: absolute; 
+        top: 151px; /* Alineado con el margen superior */
+        left: 30px; /* Alineado con el margen izquierdo */
+        right: 30px; /* Alineado con el margen derecho */
+    }
+}
