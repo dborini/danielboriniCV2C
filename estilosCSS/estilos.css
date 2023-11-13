@@ -281,3 +281,118 @@ li:hover{
         right: 30px; /* Alineado con el margen derecho */
     }
 }
+
+
+/* Estilos para el juego */
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h2 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h3 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct {
+    background: #9aeacb;
+}
+
+.incorrect {
+    background: #ff9393;
+}
+
+/* Estilos mensaje spam */
+/* Estilos para el contenido de la página */
+.spam-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #ffcc00;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10000;
+    animation: caida 3s ease-in-out forwards/* Animación de caída*/
+}
+
+/* Cambia el color al pasar el ratón por encima */
+.spam-message:hover {
+    background-color: #ffdb4d;
+}
+
+/* Animación de caída */
+@keyframes caida {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
