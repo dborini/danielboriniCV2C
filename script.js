@@ -2,39 +2,84 @@
 
 const questions = [
     {
-        question: "Cuál es la capital de Argentina?",
+        question: "¿En qué universidad desempeño mis estudios?",
         answers: [
-            { text: "Lima", correct: false},
-            { text: "CABA", correct: true},
-            { text: "Santiago", correct: false},
-            { text: "Washington", correct: false},
+            { text: "UBA", correct: false},
+            { text: "UADE", correct: true},
+            { text: "UCA", correct: false},
+            { text: "ITBA", correct: false},
         ]
     },
     {
-        question: "Cuál es la capital de Bolivia?",
+        question: "¿En cuál de los siguientes voluntariados forme parte?",
         answers: [
-            { text: "Ottawa", correct: false},
-            { text: "Sao Paulo", correct: false},
-            { text: "La Paz", correct: true},
-            { text: "Wellington", correct: false},
+            { text: "Caritas", correct: false},
+            { text: "Niños Exploradores", correct: false},
+            { text: "Techo", correct: true},
+            { text: "Greenpeace", correct: false},
         ]
     },
     {
-        question: "Cuál es la capital de Japón?",
+        question: "¿En cuál lenguaje de programación poseo conocimientos?",
         answers: [
-            { text: "Tokio", correct: true},
-            { text: "Beijing", correct: false},
-            { text: "Seul", correct: false},
-            { text: "Ankara", correct: false},
+            { text: "Python", correct: true},
+            { text: "C++", correct: false},
+            { text: "COBOL", correct: false},
+            { text: "PHP", correct: false},
         ]
     },
     {
-        question: "Cuál es la capital de Perú?",
+        question: "¿Cuál de las siguientes carreras es aquella en la cual me estoy formando?",
         answers: [
-            { text: "Lima", correct: true},
-            { text: "Quito", correct: false},
-            { text: "Bogota", correct: false},
-            { text: "Montevideo", correct: false},
+            { text: "Lic. en Gestión de Tecnología de la Información", correct: true},
+            { text: "Ingeniería Industrial", correct: false},
+            { text: "Ingeniería Informática", correct: false},
+            { text: "Tecnicatura en Desarrollo de Videojuegos", correct: false},
+        ]
+    },
+    {
+        question: "¿Bachiller en qué me formé durante mi formación secundaria?",
+        answers: [
+            { text: "Ciencias Exactas", correct: false},
+            { text: "Economía y administración", correct: false},
+            { text: "Botánica y ciencias naturales", correct: false},
+            { text: "Comunicación Social", correct: true},
+        ]
+    },
+    {
+        question: "Además de la licenciatura, ¿qué otra carrera estoy estudiando?",
+        answers: [
+            { text: "Análisis de Sistemas", correct: false},
+            { text: "Periodismo Deportivo", correct: false},
+            { text: "Piloto Privado de Avión", correct: true},
+            { text: "Diseño gráfico", correct: false},
+        ]
+    },
+    {
+        question: "¿En cuál de los siguientes idiomas poseo conocimientos?",
+        answers: [
+            { text: "Portugués", correct: false},
+            { text: "Inglés", correct: true},
+            { text: "Francés", correct: false},
+            { text: "Italiano", correct: false},
+        ]
+    },
+    {
+        question: "¿En cuál de los siguientes softwares no poseo formación?",
+        answers: [
+            { text: "Adobe Photoshop", correct: false},
+            { text: "Adobe Illustrator", correct: true},
+            { text: "AutoCAD", correct: false},
+            { text: "SolidWorks", correct: false},
+        ]
+    },
+    {
+        question: "¿Cómo es mi nombre completo?",
+        answers: [
+            { text: "Daniel Augusto Borini", correct: true},
+            { text: "Daniel Alcides Borini", correct: false},
+            { text: "Daniel Agustin Borini", correct: false},
+            { text: "Daniel Alberto Borini", correct: false},
         ]
     },
 ];
@@ -49,7 +94,7 @@ let score = 0;
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML = "Next";
+    nextButton.innerHTML = "Siguiente";
     showQuestion();
 }
 
@@ -97,8 +142,8 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
+    questionElement.innerHTML = `Usted respondió correctamente ${score} preguntas de ${questions.length}`;
+    nextButton.innerHTML = "Jugar de nuevo";
     nextButton.style.display = "block";
 }
 
